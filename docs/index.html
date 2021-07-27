@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive App Layout</title>
+    
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <div class="md:flex">
+        <!-- Sidebar -->
+        <div class="bg-cyan-600 text-white md:flex-initial md:flex-col md:h-screen lg:w-72 md:w-20">
+            <!-- Sidebar header -->
+            <div class="bg-cyan-700 text-2xl px-4 py-2 text-left md:text-center lg:text-left">
+                <i class="fa fa-fw fa-feather-alt"></i>
+                <span class="md:hidden lg:inline-block">App</span>
+            </div>
+
+            <!-- Sidebar nav -->
+            <div class="md:p-4 hidden md:block">
+                <ul>
+                    <li class="mb-2">
+                        <a href="#" class="px-4 py-2 hover:bg-cyan-700 block rounded">
+                            <i class="fas fa-fw fa-home lg:mr-1"></i>
+                            <span class="md:hidden lg:inline-block">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="px-4 py-2 bg-cyan-700 block rounded">
+                            <i class="fas fa-fw fa-folder-open lg:mr-1"></i>
+                            <span class="md:hidden lg:inline-block">Projects</span>
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="px-4 py-2 hover:bg-cyan-700 block rounded">
+                            <i class="fas fa-fw fa-cog lg:mr-1"></i>
+                            <span class="md:hidden lg:inline-block">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="block md:h-screen md:flex md:flex-col w-full">
+            <!-- Top bar -->
+            <div class="bg-white w-full flex items-center">
+                <div>
+                    <ul>
+                        <li class="inline-block">
+                            <a href="#" class="inline-block p-3 hover:bg-gray-100 hover:text-black">
+                                <i class="fas fa-fw fa-plus"></i>
+                                <span>New Project</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ml-auto">
+                    <input type="search" class="p-1 border-b bg-transparent border-gray-300 outline-none" placeholder="Search">
+                    <button class="p-3 px-4 hover:bg-gray-200">
+                        <i class="fas fa-fw fa-search"></i> <span class="sr-only">Search</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="md:flex border-t border-gray-300 h-full">
+                <!-- Listing -->
+                <div class="md:flex-initial md:w-96 bg-white md:flex-col border-r border-gray-300 h-full">
+                    <div class="border-b border-gray-300 p-4">
+                        <input type="search" placeholder="Filter" class="rounded border border-gray-300 p-2 w-full">
+                    </div>
+                    <ul>
+                        <li class="odd:bg-gray-100">
+                            <a href="#" class="p-4 border-b border-gray-300 flex lg:flex md:block">
+                                <div class="lg:flex-initial">
+                                    <div>
+                                        Responsive App Layout
+                                    </div>
+                                </div>
+                                <div class="flex-auto lg:flex-auto lg:text-right text-right">
+                                    <span class="rounded-2xl text-yellow-600 border border-yellow-600 p-1 px-2 text-xs">
+                                        In Progress
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="odd:bg-gray-100">
+                            <a href="#" class="p-4 border-b border-gray-300 flex lg:flex md:block">
+                                <div class="flex-inital lg:flex-initial">
+                                    <div>
+                                        Traq
+                                    </div>
+                                </div>
+                                <div class="flex-auto lg:flex-auto lg:text-right text-right">
+                                    <span class="rounded-2xl text-green-600 border border-green-600 p-1 px-2 text-xs">
+                                        Active
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
