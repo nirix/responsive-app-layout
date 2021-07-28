@@ -10,34 +10,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body class="bg-gray-50">
-    <div class="md:flex">
+    <div class="sm:flex">
         <!-- Sidebar -->
-        <div class="bg-cyan-600 text-white md:flex-initial md:flex-col md:h-screen lg:w-72 md:w-20">
+        <div class="bg-cyan-600 text-white sm:flex-initial sm:flex-col sm:h-screen lg:w-72 md:w-20">
             <!-- Sidebar header -->
-            <div class="bg-cyan-700 text-2xl px-4 py-2 text-left md:text-center lg:text-left">
+            <div class="bg-cyan-700 text-2xl px-4 py-2 text-left sm:text-center lg:text-left">
                 <i class="fa fa-fw fa-feather-alt"></i>
-                <span class="md:hidden lg:inline-block">App</span>
+                <span class="sm:hidden lg:inline-block">App</span>
             </div>
 
             <!-- Sidebar nav -->
-            <div class="md:p-4 hidden md:block">
+            <div class="sm:p-4 hidden sm:block">
                 <ul>
                     <li class="mb-2">
-                        <a href="#" class="px-4 py-2 hover:bg-cyan-700 block rounded">
-                            <i class="fas fa-fw fa-home lg:mr-1"></i>
-                            <span class="md:hidden lg:inline-block">Dashboard</span>
+                        <a href="#" class="px-4 py-2 hover:bg-cyan-700 block rounded transition-colors ease-in-out">
+                            <i class="fas fa-fw fa-home md:mr-1"></i>
+                            <span class="inline-block sm:hidden lg:inline-block">Dashboard</span>
                         </a>
                     </li>
                     <li class="mb-2">
-                        <a href="#" class="px-4 py-2 bg-cyan-700 block rounded">
-                            <i class="fas fa-fw fa-folder-open lg:mr-1"></i>
-                            <span class="md:hidden lg:inline-block">Projects</span>
+                        <a href="#" class="px-4 py-2 bg-cyan-700 block rounded transition-colors ease-in-out">
+                            <i class="fas fa-fw fa-folder-open md:mr-1"></i>
+                            <span class="inline-block sm:hidden lg:inline-block">Projects</span>
                         </a>
                     </li>
                     <li class="mb-2">
-                        <a href="#" class="px-4 py-2 hover:bg-cyan-700 block rounded">
-                            <i class="fas fa-fw fa-cog lg:mr-1"></i>
-                            <span class="md:hidden lg:inline-block">Settings</span>
+                        <a href="#" class="px-4 py-2 hover:bg-cyan-700 block rounded transition-colors ease-in-out">
+                            <i class="fas fa-fw fa-cog md:mr-1"></i>
+                            <span class="inline-block sm:hidden lg:inline-block">Settings</span>
                         </a>
                     </li>
                 </ul>
@@ -45,7 +45,7 @@
         </div>
 
         <!-- Content -->
-        <div class="block md:h-screen md:flex md:flex-col w-full">
+        <div class="block sm:h-screen sm:flex sm:flex-col w-full">
             <!-- Top bar -->
             <div class="bg-white w-full flex items-center">
                 <div>
@@ -69,19 +69,19 @@
             <!-- Content -->
             <div class="md:flex border-t border-gray-300 h-full">
                 <!-- Listing -->
-                <div class="md:flex-initial md:w-96 bg-white md:flex-col border-r border-gray-300 h-full">
+                <div class="md:flex-initial md:w-64 lg:w-96 bg-white md:flex-col border-r border-gray-300 h-full">
                     <div class="border-b border-gray-300 p-4">
-                        <input type="search" placeholder="Filter" class="rounded border border-gray-300 p-2 w-full">
+                        <input type="search" placeholder="Filter" class="rounded border border-gray-300 p-2 w-full outline-none focus:border-cyan-500 focus:ring ring-cyan-100 transition ease-linear">
                     </div>
                     <ul>
                         <li class="odd:bg-gray-100">
                             <a href="#" class="p-4 border-b border-gray-300 flex lg:flex md:block">
-                                <div class="lg:flex-initial">
+                                <div class="md:flex-initial">
                                     <div>
                                         Responsive App Layout
                                     </div>
                                 </div>
-                                <div class="flex-auto lg:flex-auto lg:text-right text-right">
+                                <div class="flex-auto md:flex-auto lg:text-right text-left">
                                     <span class="rounded-2xl text-yellow-600 border border-yellow-600 p-1 px-2 text-xs">
                                         In Progress
                                     </span>
@@ -90,12 +90,12 @@
                         </li>
                         <li class="odd:bg-gray-100">
                             <a href="#" class="p-4 border-b border-gray-300 flex lg:flex md:block">
-                                <div class="flex-inital lg:flex-initial">
+                                <div class="md:flex-inital">
                                     <div>
                                         Traq
                                     </div>
                                 </div>
-                                <div class="flex-auto lg:flex-auto lg:text-right text-right">
+                                <div class="flex-auto md:flex-auto lg:text-right text-left">
                                     <span class="rounded-2xl text-green-600 border border-green-600 p-1 px-2 text-xs">
                                         Active
                                     </span>
@@ -103,6 +103,22 @@
                             </a>
                         </li>
                     </ul>
+                </div>
+                <!-- Active content area -->
+                <div class="hidden md:block md:flex-auto md:flex-col h-full p-4">
+                    <div class="border-gray-300 border-dashed border-2 p-4 rounded-md h-full text-center items-center flex">
+                        <div class="flex-auto">
+                            <div class="text-gray-500 mb-5">
+                                Select Project from the list or create a new project.
+                            </div>
+                            <div>
+                                <button class="rounded bg-gray-200 hover:bg-gray-300 active:bg-gray-400 px-3 py-1 transition-colors ease-in-out">
+                                    <i class="fas fa-fw fa-plus"></i>
+                                    <span>New Project</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
