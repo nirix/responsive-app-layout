@@ -12,11 +12,19 @@
 <body class="bg-gray-50">
     <div class="sm:flex">
         <!-- Sidebar -->
-        <div class="bg-cyan-600 text-white sm:flex-initial sm:flex-col sm:h-screen lg:w-72 md:w-20">
+        <div class="bg-cyan-600 text-white sm:flex-initial sm:flex-col sm:h-screen lg:w-72 md:w-20 relative">
             <!-- Sidebar header -->
-            <div class="bg-cyan-700 text-2xl px-4 py-2 text-left sm:text-center lg:text-left">
+            <div class="bg-cyan-700 text-2xl px-4 py-2 text-left sm:text-center lg:text-left flex sm:flex-none">
+                <div class="flex-grow">
                 <i class="fa fa-fw fa-feather-alt"></i>
                 <span class="sm:hidden lg:inline-block">App</span>
+            </div>
+                <div class="block sm:hidden flex-col text-right flex-grow">
+                    <a href="#">
+                        <i class="fas fa-fw fa-bars"></i>
+                        <span class="sr-only">Open menu</span>
+                    </a>
+                </div>
             </div>
 
             <!-- Sidebar nav -->
@@ -41,6 +49,14 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+
+            <!-- User -->
+            <div class="hidden sm:block sm:absolute bottom-0 w-full">
+                <a href="#" class="bg-cyan-700 px-4 py-3 block sm:text-center lg:text-left">
+                    <i class="fas fa-fw fa-user lg:mr-1"></i>
+                    <span class="hidden lg:inline-block">John Smith</span>
+                </a>
             </div>
         </div>
 
